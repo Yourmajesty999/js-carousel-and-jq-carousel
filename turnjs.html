@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>turns test</title>
+	<!-- 加点样式-->
+
+	<style type="text/css">
+	div{
+		text-align: center;
+	}
+	.start{
+	margin-top: 100px;
+	width: 400px; 
+	height: 400px;
+	animation: myfirst 3s infinite linear;
+	}
+	@keyframes myfirst{
+		0%{transform:  perspective(320px) scale()}
+		50%{transform:  perspective(320px) scale(1) rotateY(180deg)}
+		100%{transform:  perspective(320px) scale(0.5)}
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<img id="photo" class="start" src="src/hua1.jpg">
+	</div>
+	<script type="text/javascript">
+		function show() {
+			var photo = document.getElementById('photo');//连接img标签，储存值
+			var choices = ['1','2','3','4','5','6','7'];//用数列的形式储存每张图片名，第一章已经在img标签中。
+			var index = 1;//初始化索引的值（第一张已在img标签）
+			//setInterval()方法指定周期调用函数 
+			setInterval(function() {
+				//当索引值到数列的最后一位，索引值从0开始
+				if (index == choices.length) {
+					index = 0;
+				}
+				//依次将获取图片的索引值赋给img(id="photo")列表
+				photo['src'] = "src/hua" + choices[index] + ".jpg"
+				index ++
+			},3000)
+			
+		}
+		show()
+	</script>
+
+</body>
+</html>
