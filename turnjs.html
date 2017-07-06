@@ -22,6 +22,7 @@
 	}
 	</style>
 </head>
+
 <body>
 	<div>
 		<img id="photo" class="start" src="src/hua1.jpg">
@@ -29,9 +30,8 @@
 	<script type="text/javascript">
 		function show() {
 			var photo = document.getElementById('photo');//连接img标签，储存值
-			var choices = ['1','2','3','4','5','6','7'];//用数列的形式储存每张图片名，第一章已经在img标签中。
+			var choices = ['1','2','3','4','5','6','7'];//用数列的形式储存每张图片名。
 			var index = 1;//初始化索引的值（第一张已在img标签）
-			//setInterval()方法指定周期调用函数 
 			setInterval(function() {
 				//当索引值到数列的最后一位，索引值从0开始
 				if (index == choices.length) {
