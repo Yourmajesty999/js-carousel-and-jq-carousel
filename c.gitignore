@@ -1,4 +1,8 @@
-#markdownjietu/
-#star/
-#src/
-#c.gitignore
+#ignore markdownjietu/
+markdownjietu/
+#ignore star/
+star/
+# ignore src/
+src/
+#ignore c.gitignore
+c.gitignore
